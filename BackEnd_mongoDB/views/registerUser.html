@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+</head>
+<body>
+    <h1>User Registration</h1>
+    
+    <form action="http://localhost:8081/api/v1/users/registerUser" method="POST" enctype="multipart/form-data">
+        <!-- Basic user information -->
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" required><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" required><br>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" name="phoneNumber" required><br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <label for="aadharNumber">Aadhar Number:</label>
+        <input type="text" name="aadharNumber" required><br>
+
+        <!-- File upload for profile photo -->
+        <label for="profilePhoto">Profile Photo:</label>
+        <input type="file" name="profilePhoto" accept="image/*" required><br>
+
+        <!-- Optional fields -->
+        <label for="username">Username:</label>
+        <input type="text" name="username"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <!-- Submit button -->
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
